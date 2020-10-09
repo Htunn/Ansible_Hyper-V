@@ -1,0 +1,13 @@
+---
+- name: delete hyper-v snapshot
+  hosts: win
+  tasks:
+    - name: delete hyper-v snapshot 
+      win_shell: Remove-VMSnapshot -VMName centos 
+      register: result
+
+    - name: check result
+      debug:
+        var: result
+
+        

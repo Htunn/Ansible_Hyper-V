@@ -1,0 +1,16 @@
+---
+- name: create hyper-v snapshot
+  hosts: win
+  tasks:
+    - name: create hyper-v snapshot 
+      win_shell: |
+        Set-VM -Name centos -CheckpointType Production
+        Checkpoint-VM -Name centos
+        Get-VMCheckpoint -VMName centos
+      register: result
+
+    - name: check result
+      debug:
+        var: result
+
+        

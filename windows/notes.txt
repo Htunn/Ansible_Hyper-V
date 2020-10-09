@@ -1,0 +1,10 @@
+# Manage windows machines with ansible
+
+1.Upgrade powershell and .net framework
+2.open winrm port with " winrm quickconfig " command in powershell admin
+3.install "pywinrm" python module
+4.pip3 install pywinrm
+5.check ansible python version > 2.7 ( "ansible --version")
+6.check windows winrm port connection with
+ "ansible host-pattern -m win_ping "
+

@@ -1,0 +1,13 @@
+---
+- name: test playbook
+  hosts: win
+  tasks:
+    - name: test poweshell script 
+      script: Upgrade-Powershell.ps1 
+      register: result
+
+    - name: check result
+      debug:
+        var: result
+
+        
