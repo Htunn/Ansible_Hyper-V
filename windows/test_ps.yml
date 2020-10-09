@@ -3,7 +3,7 @@
   hosts: win
   tasks:
     - name: test poweshell script 
-      script: Upgrade-Powershell.ps1 
+      script: winrm_memory_hotfix.ps1
       register: result
 
     - name: check result
