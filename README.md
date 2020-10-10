@@ -1,11 +1,4 @@
-# Create Hyper-V VM snapshot with Ansible
-
-Prerequisite
-
-windows Server 2016
-ansible "2.9.11"
-
- Manage windows machines with ansible
+# Manage windows machines with ansible
 
 1.Upgrade powershell and .net framework
 2.open winrm port with " winrm quickconfig " command in powershell admin
@@ -45,5 +38,6 @@ winrm get winrm/config/Winrs
 
 nc -vz windows2016.example.com 5986
 nc -vz windows2016.example.com 5985
+
 
 
