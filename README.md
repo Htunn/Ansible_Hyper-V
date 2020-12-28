@@ -1,5 +1,6 @@
 # Manage windows machines with ansible
 
+<<<<<<< HEAD
 1.Upgrade powershell and .net framework
 
 2.open winrm port with " winrm quickconfig " command in powershell admin
@@ -15,9 +16,22 @@
 
 
 #If having issue on pywinrm
+=======
+1.Upgrade powershell and .net framework 
+2.open winrm port with " winrm quickconfig " command in powershell admin 
+3.install "pywinrm" python module 
+4.pip3 install pywinrm 
+5.check ansible python version > 2.7 ( "ansible --version") 
+6.check windows winrm port connection with 
+ "ansible host-pattern -m win_ping " 
 
-pip3 install pywinrm
 
+If having issue on pywinrm 
+>>>>>>> 5c2692a1903c4b5c8d1e76fb91ea0cc89d2cdde5
+
+pip3 install pywinrm 
+
+<<<<<<< HEAD
 cp -r /usr/local/lib/python3.6/site-packages/* /usr/lib/python3.6/site-packages/
 
 cp -r /usr/local/lib64/python3.6/site-packages/* /usr/lib64/python3.6/site-packages/
@@ -26,18 +40,26 @@ cp -r /usr/local/lib64/python3.6/site-packages/* /usr/lib64/python3.6/site-packa
 #ansible python module location 
 
  /usr/lib/python3.6/site-packages/ansible
+=======
+cp -r /usr/local/lib/python3.6/site-packages/* /usr/lib/python3.6/site-packages/ 
+cp -r /usr/local/lib64/python3.6/site-packages/* /usr/lib64/python3.6/site-packages/ 
 
 
-# Check winrm 
+ansible python module location = /usr/lib/python3.6/site-packages/ansible 
+>>>>>>> 5c2692a1903c4b5c8d1e76fb91ea0cc89d2cdde5
 
-To view the current listeners that are running on the WinRM service, run the following command:
 
-PS> winrm enumerate winrm/config/Listener
+# Check winrm  
 
-WinRM Service Options
+To view the current listeners that are running on the WinRM service, run the following command: 
 
-To get an output of the current service configuration options, run the following command:
+PS> winrm enumerate winrm/config/Listener 
 
+WinRM Service Options 
+
+To get an output of the current service configuration options, run the following command: 
+
+<<<<<<< HEAD
 winrm get winrm/config/Service
 
 winrm get winrm/config/Winrs
@@ -48,6 +70,15 @@ winrm get winrm/config/Winrs
 nc -vz windows2016.example.com 5986
 
 nc -vz windows2016.example.com 5985
+=======
+winrm get winrm/config/Service 
+winrm get winrm/config/Winrs 
 
+
+# check winrm listener port using netcat 
+>>>>>>> 5c2692a1903c4b5c8d1e76fb91ea0cc89d2cdde5
+
+nc -vz windows2016.example.com 5986 
+nc -vz windows2016.example.com 5985 
 
 
